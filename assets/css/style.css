@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Bold.ttf'), format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf'), format('truetype');
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+}
+main{
+    min-height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color: hsl(0, 0%, 100%);
+    min-width: 58.125rem;
+    height: 40.3125rem;
+    border-radius: 2.5rem;
+    padding: 1.5625rem;
+    position: relative;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left__container{
+    padding: 4.5rem 2.8125rem;
+}
+.left__container h1{
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+}
+.left__container p{
+    color: hsl(235, 18%, 26%);
+    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 1.6875rem;
+}
+.left__container ul li:not(:last-child){
+    margin-bottom: 0.625rem;
+}
+.left__container ul li a{
+    color: hsl(235, 18%, 26%);
+    font-weight: normal;
+    font-size: 1rem;
+    pointer-events: none;
+    margin-left: 0.625rem;
+}
+.left__container .input__box{
+    margin-top: 2.3125rem;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.top small{
+    color: hsl(234, 29%, 20%);
+    font-weight: bold;
+}
+#error__msg{
+    color: hsl(4, 100%, 67%);
+}
+.input__box{
+    width: 23.125rem;
+}
+.input__box input,
+.input__box button{
+    margin: 0.625rem 0;
+    padding: 1.3rem;
+    border-radius: 0.625rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.input__box input{
+    border: 1px solid hsl(231, 7%, 60%);
+    color: hsl(234, 29%, 20%);
+    font-weight: normal;
+}
+.input__box #email.error{
+    border-color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 58%, 86%);
+}
+.input__box input:focus{
+    border-color: hsl(234, 29%, 20%);
+}
+.input__box button,
+#dismiss{
+    font-weight: bold;
+    background: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.input__box button:hover,
+#dismiss:hover{
+    background-color: hsl(4, 100%, 67%);
+}
+dialog{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    border: none;
+    width: 31.25rem;
+    min-height: 32.5rem;
+    border-radius: 1.875rem;
+    background-color: hsl(0, 0%, 100%);
+    padding: 3rem 4rem;
+}
+dialog img{
+    width: 17%;
+    margin-bottom: 2rem;
+}
+dialog h2{
+    color: hsl(234, 29%, 20%);
+    font-size: 3.46875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+dialog p{
+    color: hsl(235, 18%, 26%);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+dialog p span{
+    font-weight: bold;
+    color: hsl(234, 29%, 20%);
+}
+#dismiss{
+    width: 100%;
+    height: 3.75rem;
+    border-radius: 0.625rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+dialog::backdrop{
+    background-color: hsl(234, 29%, 20%);
+}
+.attribution {
+      background-color: hsl(0, 0%, 100%); 
+      font-size: 11px; text-align: center; 
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (max-width:1366px) {
+    section{
+        height: 35.625rem;
+    }
+    .right__container img{
+       max-height: 32.5rem;
+    }
+    
+}
+@media screen and (max-width:886px) {
+    section{
+        min-width: 100%;
+        height: auto;
+        padding: 0;
+        border-radius: 0;
+    }
+    .container{
+        flex-direction:column-reverse;
+    }
+    .left__container{
+        padding: 2rem;
+    }
+    .left__container h1{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .left__container ul li:not(:last-child){
+        margin-bottom: 1.2rem;
+    }
+    .left__container ul li a{
+        line-height: 1.5;
+    }
+    .right__container img,
+    .input__box{
+        width: 100%;
+    }
+    .input__box input,
+    .input__box button{
+        height: 3.5rem;
+    }
+    dialog{
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
+        min-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 2rem;
+    }
+    dialog img{
+        width: 25%;
+    }
+    dialog h2{
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    dialog::backdrop{
+        display: none;
+    }
+    #dismiss{
+        transform: translateY(9.375rem);
+    }
+}
